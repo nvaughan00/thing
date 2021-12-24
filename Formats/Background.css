@@ -1,0 +1,96 @@
+body {
+    background-image: url("Resources/background1.jpeg");
+    background-color: #cccccc;
+}
+
+.home {
+    list-style-type: none;
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.3) center;
+    padding: 0.5em 0.2em 0.8em 0.5em;
+    border-radius: 25px;
+}
+
+.home li {
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+    padding: 0.5em 0.2em 0.8em 0.5em;
+}
+
+.wrapperSD {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(20px, auto);
+
+}
+
+.oneSD {
+    grid-column: 1;
+    grid-row: 1;
+    padding-left: 3%;
+}
+
+.twoSD {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.threeSD {
+    grid-column: 1;
+    grid-row: 2;
+    padding-left: 3%;
+}
+
+.fourSD {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.wrapperP {
+    padding-top: 3%;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(20px, auto);
+
+}
+
+.oneP {
+    grid-column: 1;
+    grid-row: 1;
+    font: 22px sans-serif;
+    width: 90%;
+    height: 600px;
+    overflow: auto;
+    overflow-x: hidden;
+    border-style: solid;
+    border-radius: 15px;
+}
+
+.oneHP {
+    grid-column: 3;
+    grid-row: 1;
+    padding-top: 15%;
+}
+
+.twoP {
+    grid-column: 2;
+    grid-row: 1;
+    font: 22px sans-serif;
+    width: 90%;
+    height: 600px;
+    overflow: auto;
+    overflow-x: hidden;
+    border-style: solid;
+    border-radius: 15px;
+}
+
+.twoHP {
+    grid-column: 4;
+    grid-row: 1;
+    padding-top: 15%;
+}
