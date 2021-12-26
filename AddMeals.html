@@ -16,17 +16,15 @@
             h2 {text-align: center;font-size: 18px;font-style: italic}
             h3 {font-size: 32px;text-decoration: underline;font-weight: bold;font-style: italic}
             h4 {text-align: center;font-size: 22px;font-style: italic}
-            button {border-radius: 15%;background-color: lightcoral}
-            input {position: relative;left:5%}
-            label {position: relative;left:5%}
+            button {border-radius: 15%;background-color: lightcoral;}
+            label {position: relative; top: 5%; left: 5%;}
+            input {position: relative; top: 5%; left: 5%; width: 100px}
         </style>
 
         <h1>Add Meals</h1>
             <ul class="home">
                 <li><a href = "Home.html" class = "nullify">Home</a></li>
-                <li><a href = "Employment.html" class = "employment">Employment</a></li>
-                <li><a href = "Reflections.html" class = "reflections">Reflections</a></li>
-                <li><a href = "SeniorDesign.html" class = "seniorDesign">Senior Design</a></li>
+                <li><a href = "AddGoals.html" class = "nullify">Add Goals</a></li>
             </ul>
 
             <div class="wrapper">
@@ -38,18 +36,28 @@
                 <div class="six" id="lunches"></div>
                 <div class="seven" id="dinners"></div>
                 <div class="eight" id="others">
-                    <label for="nameInput">Name: </label><input type="text" id="nameInput"><br>
-                    <label for="calInput">Calories: </label><input type="text" id="calInput"><br>
-                    <label for="proteinInput">Protein: </label><input type="text" id="proteinInput"><br>
-                    <label for="carbInput">Carbs: </label><input type="text" id="carbInput"><br>
-                    <label for="fatInput">Fat: </label><input type="text" id="fatInput"><br>
-                    <ol id="inputListDisplay">
-                    </ol><br>
-                    <button onclick="addOther()" type="button" style="position: relative;left: 5%;top: 15%">Submit</button>
+                    <div class="innerWrapper">
+                        <div class="innerOne">
+                            <label for="nameInput">Name: </label><input type="text" id="nameInput"><br>
+                            <label for="calInput">Calories: </label><input type="text" id="calInput"><br>
+                            <label for="proteinInput">Protein: </label><input type="text" id="proteinInput"><br>
+                            <label for="carbInput">Carbs: </label><input type="text" id="carbInput"><br>
+                            <label for="fatInput">Fat: </label><input type="text" id="fatInput"><br>
+                        </div>
+                        <div class="innerTwo">
+                            <ol id="inputListDisplay" style="position: relative;text-align: left"></ol><br>
+                        </div>
+                        <div class="innerThree">
+                            <button onclick="addOther()" type="button" style="position: relative;font-size: 24px;top: 5%;left: 5%;">Submit</button>
+                        </div>
+                        <div class="innerFour" style="position: relative;font-size: 24px;">
+
+                        </div>
+                    </div>
                 </div>
             </div>
 
-        <h3 style="display: inline;text-decoration:black">Daily Totals: </h3>
+        <br><h3 style="display: inline;text-decoration:black">Daily Totals: </h3>
         <h4 style="display: inline" id ="runningTotalDisplay"></h4>
     </body>
 </html>

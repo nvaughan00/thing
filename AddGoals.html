@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NVReflections</title>
+    <link rel='stylesheet' type='text/css' href='Formats/Background.css'>
+    <link rel='stylesheet' type='text/css' href='Formats/ScrollBox.css'>
+</head>
+    <body>
+
+        <script type = "text/javascript" src = "Javascript/AddMeals.js"></script>
+
+        <style>
+            h1 {text-align: center;font-size: 28px}
+            h2 {text-align: center;font-size: 18px;font-style: italic}
+            h3 {font-size: 32px;text-decoration: underline;font-weight: bold;font-style: italic}
+            h4 {text-align: center;font-size: 22px;font-style: italic}
+            button {border-radius: 15%;background-color: lightcoral}
+            label {position: relative;left:5%;top:5%}
+            input {position:relative;left:5%;top:5%}
+        </style>
+
+        <h1>Reflections</h1>
+
+            <ul class="home">
+                <li><a href = "Home.html" class = "nullify">Home</a></li>
+                <li><a href = "AddMeals.html" class = "nullify">Add Meals</a></li>
+            </ul>
+
+        <div class="wrapper">
+            <div class="one"><h3>Add A Workout Goal</h3></div>
+
+            <div class="five" style="width: 400px; text-align: left">
+                <label for="nameGoalInput">Name: </label><input type="text" id="nameGoalInput"><br>
+                <label for="calGoalInput">Calories: </label><input type="text" id="calGoalInput"><br>
+                <label for="proteinGoalInput">Protein: </label><input type="text" id="proteinGoalInput"><br>
+                <label for="carbGoalInput">Carbs: </label><input type="text" id="carbGoalInput"><br>
+                <label for="fatGoalInput">Fat: </label><input type="text" id="fatGoalInput"><br><br>
+                <p style="position: relative;left:5%">Set a goal for daily calorie/macro consumption. Each user can only <br>have 1 goal at a time</p>
+                <button onclick="addGoal()" type="button" style="position: relative;font-size: 24px;left:5%">Submit</button>
+                <p id="goalDisplay"></p>
+            </div>
+        </div>
+
+    </body>
+</html>

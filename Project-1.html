@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel='stylesheet' type='text/css' href='../Formats/Background.css'>
+    <title>Title</title>
+</head>
+<body>
+
+    <style>
+        h1 {text-align: center;font-size: 28px}
+        h3 {text-align: left;font-size: 32px;text-decoration: underline;font-weight: bold;font-style: italic;background: rgba(255, 255, 255, 0.3); border-radius: 5px;position:relative;top:-35px}
+        p {position:relative;top:-50px}
+    </style>
+
+    <a href="Project-3.html" style="position: absolute; right:68%;top:10%;font-style:italic;font-size: 20px">Previous</a>
+    <a href="Project-2.html" style="position: absolute; right:30%;top:10%;font-style:italic;font-size: 20px">Next</a>
+
+    <h1>Automated Mushroom Greenhouse</h1>
+    <ul class="home">
+        <li><a href = "../AddMeals.html" class = "nullify">Projects</a></li>
+        <li><a href = "../Home.html" class = "nullify">Home</a></li>
+        <li><a href = "../Employment.html" class = "employment">Employment</a></li>
+        <li><a href = "../AddGoals.html" class = "reflections">Reflections</a></li>
+        <li><a href = "../SeniorDesign.html" class = "seniorDesign">Senior Design</a></li>
+    </ul>
+
+    <div class="wrapperP">
+        <div class="oneP">
+            <h3 style="width:45%">Description</h3>
+            <p>
+                This project originally started as an automated greenhouse. I found that the original design was a bit too bulky,
+                so I scaled it down and made this indoor version. The design is a pretty simple concept; A temperature/humidity sensor
+                reads information inside the greenhouse. Based off the data send by the sensor, misters, a fan, & light levels can be adjusted.
+                This in turn lets me not worry about what's growing inside as the process is automated. The logic component of the build
+                is an Arduino Uno outside the greenhouse. This connects to the sensor, fan, misters, & some relays. I uploaded code
+                to the Arduino to handle any logic that was needed. The code can be viewed on my Github.
+            </p>
+        </div>
+        <div class="oneHP"><img src="../Formats/Resources/proj1-1.jpg" style="width:400px;height:400px"></div>
+        <div class="twoP">
+            <h3 style="width:64%">Knowledge Gain</h3>
+            <p>
+                I learned much through this project. Breaking it down into some categories, I learned the following:
+                <br><br/><b>Embedded Programming</b><br/>
+                While I'd tinkered with it before in classes & free-time, I've never tried writing embedded code to actually make something work.
+                Utilizing the Arduino interface allowed me to do this fairly easily. The code itself is basically just C with some extra functions.
+                I'm reasonably familiar with C, so this didn't prove too difficult.
+                <br><br/><b>Circuits</b><br/>
+                My experience with circuits is nearly non-existent. Fortunately, Arduino handles most things circuitry, unless it gets complex. While
+                I didn't have the need to develop my own circuit, I did get to find out how relays work.
+                <br><br/><b>Mushroom Research</b><br/>
+                It's not necessarily important knowledge for this website, but I learned a ton about mushrooms & fungi during my build. My information
+                came from a plethora of videos, documentaries, & other websites of fellow mushroom lovers. I don't feel I should put my findings here,
+                but it was fun nevertheless. This influenced my design a bit, and I have ideas on how to refactor my greenhouse in the future.
+            </p>
+        </div>
+        <div class="twoHP"><img src="../Formats/Resources/proj1-2.jpg" style="width:400px;height:400px"></div>
+    </div>
+
+</body>
+</html>

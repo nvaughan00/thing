@@ -42,9 +42,33 @@ var con = sql.createConnection({
 });
 con.connect();
 
+app.get('/:username/getGoal', async function(req, res) {
+	var username = req.params.username;
+
+	con.query('SELECT id FROM user_info WHERE username = ?', username, async function(err, data) {
+		console.log("GETTING Goal INFO: id = "+data[0].id);
+
+		con.query('SELECT goalName, calories, protein, fat, carbs FROM user_goal WHERE userId = ?', data[0].id, async function(err, cols) {
+			if(err) {
+				res.status(400).send({
+					"message":"No goals found"
+				}).end();
+			}
+			else {
+				res.status(200).send({
+					"calories": cols[0].calories,
+					"protein": cols[0].protein,
+					"fat": cols[0].fat,
+					"carbs": cols[0].carbs
+				}).end();
+			}
+		});
+	});
+});
+
 app.get('/:username/:date/mealOther', async function(req, res) {
-	var username = req.params.username
-	var date = req.params.date
+	var username = req.params.username;
+	var date = req.params.date;
 	
 	con.query('SELECT id FROM user_info WHERE username = ?', username, async function(err, data, fields) {
 		console.log("GETTING MEAL INFO: id = "+data[0].id);
@@ -78,6 +102,31 @@ app.get('/:username/:date/mealOther', async function(req, res) {
 					res.status(200).send(sendData).end();
 				}
 			});
+		});
+	});
+});
+
+app.post('/:username/addGoal', async function(req, res) {
+	var username = req.params.username;
+	var calories = req.body.calories;
+	var protein = req.body.protein;
+	var fat = req.body.fat;
+	var carbs = req.body.carbs;
+
+	con.query('SELECT id FROM user_info WHERE username = ?', username, async function(err, data) {
+		console.log("GETTING Goal INFO: id = "+data[0].id);
+
+		con.query('INSERT INTO user_goal VALUES(?, ?, ?, ?, ?)', [data[0].id,calories,protein,fat,carbs], async function(err, cols) {
+			if(err) {
+				res.status(400).send({
+					"message":"No goals found"
+				}).end();
+			}
+			else {
+				res.status(200).send({
+					"message": "Successfully Added Goal"
+				}).end();
+			}
 		});
 	});
 });
